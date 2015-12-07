@@ -1,0 +1,16 @@
+database:
+  container_name: springpostgres
+  build: ./postgres
+  environment:
+    DB_USER: spring1
+    DB_PASS: spring1
+    DB_NAME: springweb
+  ports:
+    - "5432:5432"
+app:
+  container_name: springweb
+  build: ./web
+  ports:
+    - "8080:8080"
+  links:
+    - database
