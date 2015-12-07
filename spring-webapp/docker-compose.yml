@@ -12,5 +12,6 @@ app:
   build: ./web
   ports:
     - "8080:8080"
-  links:
+#links - podajemy nazwę serwisu który chcemy mieć w pliku /etc/hosts - dzięki temu app odwołuje się poprzez host "database", a nie IP
+	links:
     - database

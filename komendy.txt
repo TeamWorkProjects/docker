@@ -1,0 +1,16 @@
+#Prawdopodobnie przed każdym poleceniem będzie potrzebne sudo
+
+docker images : lista dostępnych obrazów
+docker ps : lista aktualnie uruchomionych procesów
+docker ps -a : lista wszystkich procesów
+
+docker rmi id_obrazu: usunięcie obrazu
+
+docker run nazwa_obrazu [-p local:inDocker] : uruchomienie obrazu oraz jego zaciągnięcie z hub'a jeżeli go nie ma lokalnie
+docker inspect nazwaProcesu : wyswietelenie szczegółów uruchomionego procesu, mamy np jego ip
+
+#Do docker-compose tworzymy plik docker-compose.yml
+
+docker-compose -f docker-compose.yml build : buduje nam obrazy jeżeli linkujemy Dockerfile'sudo
+docker-compose -f docker-compose.yml up : uruchamia środowisko
+docker-compose -f docker-compose.yml stop : zatrzymuje środowisko
